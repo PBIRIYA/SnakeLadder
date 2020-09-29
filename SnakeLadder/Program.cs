@@ -13,8 +13,13 @@ namespace SnakeLadder
             int currentposition = start;
             Console.WriteLine(" welcome to the snakeladder game:");
             Console.WriteLine("Do you want to play snake ladder");
-            Console.ReadLine();
+            snakeladder = Console.ReadLine();
 
-        }
+            if (snakeladder == "yes")
+            {
+                Random random = new Random();
+                int randomnumber = random.Next(1, 7);
+
+            }
     }
 }
