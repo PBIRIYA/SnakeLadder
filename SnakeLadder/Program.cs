@@ -19,7 +19,12 @@ namespace SnakeLadder
             {
                 Random random = new Random();
                 int randomnumber = random.Next(1, 7);
-
+                Console.WriteLine("throwing a dice.....number is:" + randomnumber);
             }
+        else
+            {
+                Console.WriteLine("player choose not to play");
+            }
+        }
     }
 }
