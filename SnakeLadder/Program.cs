@@ -1,30 +1,24 @@
 ﻿using System;
-
-namespace SnakeLadder
+namespace SnakeLadderGame
 {
     class Program
     {
         static void Main(string[] args)
         {
-            string snakeladder = null;
-            int start = 0;
-            int max = 100;
-            int current_score = 0;
-            int currentposition = start;
-            Console.WriteLine(" welcome to the snakeladder game:");
-            Console.WriteLine("Do you want to play snake ladder");
-            snakeladder = Console.ReadLine();
-
-            if (snakeladder == "yes")
-            {
-                Random random = new Random();
-                int randomnumber = random.Next(1, 7);
-                Console.WriteLine("throwing a dice.....number is:" + randomnumber);
-            }
-        else
-            {
-                Console.WriteLine("player choose not to play");
-            }
+            Console.WriteLine("Welcome to Snake and Ladder Game");
+            Console.WriteLine("================================");
+            int playerScore;
+            playerScore = 0;
+            Console.WriteLine("Initial Player Score : " + playerScore);
+            playerScore = RollTheDie();
+            Console.WriteLine("After rolling the die, score is " + playerScore);
+            return;
+        }
+        static int RollTheDie()
+        {
+            Random random = new Random();
+            int score = random.Next(1, 7);
+            return score;
         }
     }
 }
